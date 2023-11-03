@@ -4,10 +4,10 @@ This project uses a Golang backend service with a dockerized postgreSQL database
 ## Table of Summary
 
 
--[Prerquisties](#prerquisties)
--[APIs](#apis)
--[Docker](#docker)
--[PostgresSQL](#postgresql)
+- [Prerquisties](#prerquisties)
+- [APIs](#apis)
+- [Docker](#docker)
+- [PostgresSQL](#postgresql)
 
 ## Prerquisties
 

@@ -22,7 +22,7 @@ Install the following softwares with their corresponding versions to run this ap
 
 Postman is used for testing the web service's APIs; the current version of Postman used is Version 10.19.7
 
--[Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 Docker Desktop is used to manage the container and image; Docker Desktop is not neccsary since this application donwloads the docker package. The current version of Docker Desktop used is v4.23.0
 

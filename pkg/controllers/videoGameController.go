@@ -21,11 +21,11 @@ func (vgc VideoGameController) PostNewVideoGame(newVideoGame models.VideoGame) e
 	err := vgc.vgd.PostNewVideoGame(newVideoGame)
 	return err
 }
-func (vgc VideoGameController) UpdateVideoGame() {
-	//result := vgc.vgd.UpdateVideoGame()
-	//return result
+func (vgc VideoGameController) UpdateVideoGame(updateVideoGame models.VideoGame) error {
+	err := vgc.vgd.UpdateVideoGame(updateVideoGame)
+	return err
 }
-func (vgc VideoGameController) DeleteVideoGame() {
-	//result := vgc.vgd.DeleteVideoGame()
-	//return result
+func (vgc VideoGameController) DeleteVideoGame(DeleteVideoGame models.VideoGame) error {
+	err := vgc.vgd.DeleteVideoGame(DeleteVideoGame)
+	return err
 }

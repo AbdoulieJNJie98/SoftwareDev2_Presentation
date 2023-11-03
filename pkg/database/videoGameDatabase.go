@@ -38,7 +38,7 @@ func (vgd VideoGameDatabase) PostNewVideoGame(newVideoGame models.VideoGame) err
 		print("error:" + err.Error())
 		return err
 	}
-	query := "insert into video_games (title, platform, genre, price) VALUES (@title, @platform, @genre, @price)"
+	query := "INSERT into video_games (title, platform, genre, price) VALUES (@title, @platform, @genre, @price)"
 	args := pgx.NamedArgs{
 		"title":    newVideoGame.Title,
 		"platform": newVideoGame.Platform,
@@ -52,21 +52,47 @@ func (vgd VideoGameDatabase) PostNewVideoGame(newVideoGame models.VideoGame) err
 	}
 	return err
 }
-func (vgd VideoGameDatabase) UpdateVideoGame() {
-	// psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", vgd.PostgresHost, vgd.PostgresPort, vgd.PostgresUser, vgd.PostgresPassword, vgd.PostgresDBName)
+func (vgd VideoGameDatabase) UpdateVideoGame(updateVideoGame models.VideoGame) error {
+	// construct postgres connection string by replacing %s and %d with corrasponding varaibles
+	psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", vgd.PostgresHost, vgd.PostgresPort, vgd.PostgresUser, vgd.PostgresPassword, vgd.PostgresDBName)
 
-	// connection, err := pgx.Connect(context.Background(), psqlconn)
-	// if err != nil {
-	// 	return err
-	// }
-	// return "Update Video Game"
+	connection, err := pgx.Connect(context.Background(), psqlconn)
+	if err != nil {
+		print("error:" + err.Error())
+		return err
+	}
+	query := "update video_games SET title = @title, platform = @platform, genre = @genre, price = @price WHERE title = @orginalTitle"
+	args := pgx.NamedArgs{
+		"title":        updateVideoGame.Title,
+		"platform":     updateVideoGame.Platform,
+		"genre":        updateVideoGame.Genre,
+		"price":        updateVideoGame.Price,
+		"orginalTitle": updateVideoGame.Title,
+	}
+	_, err = connection.Exec(context.Background(), query, args) // look into context (providing an underscore in golang means it will ignore the argument)
+	if err != nil {
+		print("error 2:" + err.Error())
+		return err
+	}
+	return err
 }
-func (vgd VideoGameDatabase) DeleteVideoGame() {
-	// psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", vgd.PostgresHost, vgd.PostgresPort, vgd.PostgresUser, vgd.PostgresPassword, vgd.PostgresDBName)
+func (vgd VideoGameDatabase) DeleteVideoGame(deleteVideoGame models.VideoGame) error {
+	// construct postgres connection string by replacing %s and %d with corrasponding varaibles
+	psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", vgd.PostgresHost, vgd.PostgresPort, vgd.PostgresUser, vgd.PostgresPassword, vgd.PostgresDBName)
 
-	// connection, err := pgx.Connect(context.Background(), psqlconn)
-	// if err != nil {
-	// 	return err
-	// }
-	// return "Delete Video Game"
+	connection, err := pgx.Connect(context.Background(), psqlconn)
+	if err != nil {
+		print("error:" + err.Error())
+		return err
+	}
+	query := "DELETE FROM video_games WHERE title = @title"
+	args := pgx.NamedArgs{
+		"title": deleteVideoGame.Title,
+	}
+	_, err = connection.Exec(context.Background(), query, args) // look into context (providing an underscore in golang means it will ignore the argument)
+	if err != nil {
+		print("error 2:" + err.Error())
+		return err
+	}
+	return err
 }

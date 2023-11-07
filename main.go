@@ -10,8 +10,6 @@ import (
 )
 
 func main() {
-	test := "10"
-	println("Hello World! " + test)
 	vgd := database.NewVideoGameDatabase("localhost", 5432, "user", "password", "video_game_list")
 	vgc := controllers.NewVideoGameController(*vgd)
 	vgh := handlers.NewVideoGameHandler(*vgc) // *vgc: the * is used to take the literal value instead of the memeory location

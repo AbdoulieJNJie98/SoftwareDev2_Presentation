@@ -30,7 +30,7 @@ Install the following softwares with their corresponding versions to run this ap
 
 ## Docker
 
-## PostgrSQL
+## PostgreSQL
 
   PostgreSQL is used for storing video game titles that consist of the game's title, platform, genre, and price. 
   In order to enure the project is connected to the database, run the following command first:

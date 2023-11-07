@@ -7,7 +7,7 @@ This project uses a Golang backend service with a dockerized postgreSQL database
 - [Prerquisties](#prerquisties)
 - [APIs](#apis)
 - [Docker](#docker)
-- [PostgresSQL](#postgresql)
+- [PostgreSQL](#postgresql)
 
 ## Prerquisties
 
@@ -28,6 +28,20 @@ Install the following softwares with their corresponding versions to run this ap
 
 ## APIs
 
+## Docker
+
+## PostgrSQL
+
+  PostgreSQL is used for storing video game titles that consist of the game's title, platform, genre, and price. 
+  In order to enure the project is connected to the database, run the following command first:
+  ```bash
+ docker pull postgres:13.11
+  ```
+  Next, enter the following command
+ ```bash
+ docker run -p 5432:5432 --name some-postgres -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -d postgres:13.11
+  ```
+ The first command pulls the postgres docker image from the docker hub, and the second command runs the actual image with the proper enviromental varaibles
 
 # Command used to install package that connects the applicaiton to the database
 ```bash

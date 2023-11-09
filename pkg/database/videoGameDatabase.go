@@ -39,6 +39,7 @@ func (vgd VideoGameDatabase) PostNewVideoGame(newVideoGame models.VideoGame) err
 		return err
 	}
 	query := "INSERT into video_games (title, platform, genre, price) VALUES (@title, @platform, @genre, @price)"
+	//query := "INSERT into discount_video_games (title, platform, genre, price) VALUES (@title, @platform, @genre, @price)"
 	args := pgx.NamedArgs{
 		"title":    newVideoGame.Title,
 		"platform": newVideoGame.Platform,
@@ -62,6 +63,7 @@ func (vgd VideoGameDatabase) UpdateVideoGame(updateVideoGame models.VideoGame) e
 		return err
 	}
 	query := "update video_games SET title = @title, platform = @platform, genre = @genre, price = @price WHERE title = @orginalTitle"
+	//query := "update discount_video_games SET title = @title, platform = @platform, genre = @genre, price = @price WHERE title = @orginalTitle"
 	args := pgx.NamedArgs{
 		"title":        updateVideoGame.Title,
 		"platform":     updateVideoGame.Platform,
@@ -86,6 +88,7 @@ func (vgd VideoGameDatabase) DeleteVideoGame(deleteVideoGame models.VideoGame) e
 		return err
 	}
 	query := "DELETE FROM video_games WHERE title = @title"
+	//query := "DELETE FROM discount_video_games WHERE title = @title"
 	args := pgx.NamedArgs{
 		"title": deleteVideoGame.Title,
 	}

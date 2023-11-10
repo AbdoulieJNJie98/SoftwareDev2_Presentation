@@ -32,7 +32,7 @@ Install the following softwares with their corresponding versions to run this ap
   
   HTTP request types, specific paths/endpoints, summaries of what the API does, possible responses from the API, descriptions of the responses, and the content type of the responses.
 
-- POST /videoGame Add a new video game
+### POST /videoGame Add a new video game
   
   200 - Request was successful
 
@@ -40,11 +40,21 @@ Install the following softwares with their corresponding versions to run this ap
   
   application/json
 
-- PATCH /videoGame Edit an existing video game
+### PATCH /videoGame Edit an existing video game
+  200 - Request was successful
 
-- Delete /videoGame
+  400 - Request was invalid
+  
+  application/json
 
+### Delete /videoGame Delete an existing video game
 
+  200 - Request was successful
+
+  400 - Request was invalid
+  
+  application/json
+  
 ## Docker
   This program's web service is ran through Docker
 

@@ -28,6 +28,11 @@ Install the following softwares with their corresponding versions to run this ap
 
 ## APIs
 
+- [Add Video Game]
+- [Edit Video Game]
+- [Delete Video Game]
+
+
 ## Docker
 
 ## PostgreSQL

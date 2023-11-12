@@ -31,11 +31,13 @@ Install the following softwares with their corresponding versions to run this ap
   
   HTTP request types, specific paths/endpoints, summaries of what the API does, possible responses from the API, descriptions of the responses, and the content type of the responses.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| HTTP Method   | Route         | Description | Resoponses|
+| ------------- |:-------------:| -----:| -----:|
+| POST     |/videoGame | Add a new video game  |   200 - Request was successful
+
+  400 - Request was invalid | 
+| PATCH      | /videoGame  |   Edit an existing video game  |       |
+| DELETE | /videoGame     |    Delete an existing video game  |       |
 
 ### POST /videoGame Add a new video game
   

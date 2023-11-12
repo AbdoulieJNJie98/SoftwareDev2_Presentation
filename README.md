@@ -37,29 +37,6 @@ Install the following softwares with their corresponding versions to run this ap
 | PATCH      | /videoGame  |   Edit an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |
 | DELETE | /videoGame     |    Delete an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |
 
-### POST /videoGame Add a new video game
-  
-  200 - Request was successful
-
-  400 - Request was invalid
-  
-  application/json
-
-### PATCH /videoGame Edit an existing video game
-  200 - Request was successful
-
-  400 - Request was invalid
-  
-  application/json
-
-### Delete /videoGame Delete an existing video game
-
-  200 - Request was successful
-
-  400 - Request was invalid
-  
-  application/json
-
 ## PostgreSQL
 
   PostgreSQL is used for storing video game titles that consist of the game's title, platform, genre, and price. 

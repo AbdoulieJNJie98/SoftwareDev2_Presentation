@@ -39,13 +39,12 @@ Install the following softwares with their corresponding versions to run this ap
 
 ## PostgreSQL
 
-  PostgreSQL is used for storing video game titles that consist of the game's title, platform, genre, and price. 
-  In order to ensure the project is connected to the database, run the following command first:
+  PostgreSQL is a datbase used for storing video game information that consists of the game's title, platform, genre, and price. 
+  Pulls the postgres docker image from the docker hub.
   ```bash
  docker pull postgres:13.11
   ```
-  Next, enter the following command
+  Runs the actual image with the proper enviromental varaibles. The command creates a new docker container called `some-postgres` on port `5432` on your computer. It also creates a postgres user called `user` with the password `password` for signing into the database.
  ```bash
  docker run -p 5432:5432 --name some-postgres -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -d postgres:13.11
   ```
- The first command pulls the postgres docker image from the docker hub, and the second command runs the actual image with the proper enviromental varaibles

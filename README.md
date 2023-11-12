@@ -40,6 +40,7 @@ Install the following softwares with their corresponding versions to run this ap
 ## PostgreSQL
 
   PostgreSQL is a datbase used for storing video game information that consists of the game's title, platform, genre, and price. 
+  
   Pulls the postgres docker image from the docker hub.
   ```bash
  docker pull postgres:13.11

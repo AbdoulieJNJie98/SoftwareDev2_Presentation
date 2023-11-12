@@ -32,7 +32,7 @@ Install the following softwares with their corresponding versions to run this ap
   HTTP request types, specific paths/endpoints, summaries of what the API does, possible responses from the API, descriptions of the responses, and the content type of the responses.
 
 | HTTP Method   | Route         | Description | Responses|
-| ------------- |:-------------:| -----:| -----:|
+| ------------- |:-------------:|:---------------:|:---------:|
 | POST     |/videoGame | Add a new video game  |   200 - Request was successful <br> 400 - Request was invalid| 
 | PATCH      | /videoGame  |   Edit an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |
 | DELETE | /videoGame     |    Delete an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |

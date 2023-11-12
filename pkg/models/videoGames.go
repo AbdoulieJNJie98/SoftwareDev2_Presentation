@@ -2,7 +2,7 @@ package models
 
 // file used to contain structure that will be used througout entire project
 
-// Struct representing a new PostgreSQL object
+// Struct representing a video game object
 // look up what bson stands for
 type VideoGame struct {
 	Title    string  `json:"title" bson:"title,omitempty"`

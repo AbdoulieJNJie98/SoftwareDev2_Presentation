@@ -33,9 +33,9 @@ Install the following softwares with their corresponding versions to run this ap
 
 | HTTP Method   | Route         | Description | Responses|
 | ------------- |:-------------:|:---------------:|:---------:|
-| POST     |/videoGame | Add a new video game  |   200 - Request was successful <br> 400 - Request was invalid| 
-| PATCH      | /videoGame  |   Edit an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |
-| DELETE | /videoGame     |    Delete an existing video game  |  200 - Request was successful <br> 400 - Request was invalid     |
+| POST     |/videoGame | Add a new video game  |   200 - Request was successful <br>400 - Request was invalid| 
+| PATCH      | /videoGame  |   Edit an existing video game  |  200 - Request was successful <br>400 - Request was invalid     |
+| DELETE | /videoGame     |    Delete an existing video game  |  200 - Request was successful <br>400 - Request was invalid     |
 
 ## PostgreSQL
 

@@ -33,8 +33,7 @@ Install the following softwares with their corresponding versions to run this ap
 
 | HTTP Method   | Route         | Description | Resoponses|
 | ------------- |:-------------:| -----:| -----:|
-| POST     |/videoGame | Add a new video game  |   200 - Request was successful
-400 - Request was invalid *separate paragraph*| 
+| POST     |/videoGame | Add a new video game  |   200 - Request was successful \n 400 - Request was invalid| 
 | PATCH      | /videoGame  |   Edit an existing video game  |       |
 | DELETE | /videoGame     |    Delete an existing video game  |       |
 

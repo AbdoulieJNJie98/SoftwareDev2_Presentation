@@ -1,3 +1,4 @@
+// This file is used to handle the responses that are sent back to the client
 package handlers
 
 import (
@@ -7,7 +8,7 @@ import (
 	"net/http"
 )
 
-// Strucute used to provide access to videoGameHandler methods
+// Strucute used to provide access to videoGameHandler methods (similar to defining a class in java)
 type VideoGameHandler struct {
 	vgc controllers.VideoGameController
 }

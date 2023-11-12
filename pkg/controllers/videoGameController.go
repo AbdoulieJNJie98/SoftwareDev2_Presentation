@@ -1,3 +1,4 @@
+// This file is used as middle man between the handler and database that can be used to modify what is relaid back to the handler
 package controllers
 
 import (

@@ -1,3 +1,4 @@
+// This file is used to send rquest to the database and mainpulate it
 package database
 
 import (
@@ -33,6 +34,7 @@ func (vgd VideoGameDatabase) PostNewVideoGame(newVideoGame models.VideoGame) err
 	// construct postgres connection string by replacing %s and %d with corrasponding varaibles
 	psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", vgd.PostgresHost, vgd.PostgresPort, vgd.PostgresUser, vgd.PostgresPassword, vgd.PostgresDBName)
 
+	// connects code to the database
 	connection, err := pgx.Connect(context.Background(), psqlconn)
 	if err != nil {
 		print("error:" + err.Error())

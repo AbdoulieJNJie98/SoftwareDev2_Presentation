@@ -45,7 +45,9 @@ Install the following softwares with their corresponding versions to run this ap
   ```bash
  docker pull postgres:13.11
   ```
-  Runs the actual image with the proper enviromental varaibles. The command creates a new docker container called `some-postgres` on port `5432` on your computer. It also creates a postgres user called `user` with the password `password` for signing into the database.
+  Runs the actual image with the proper enviromental varaibles. 
+  
+  The command creates a new docker container called `some-postgres` on port `5432` on your computer. It also creates a postgres user called `user` with the password `password` for signing into the database.
  ```bash
  docker run -p 5432:5432 --name some-postgres -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -d postgres:13.11
   ```

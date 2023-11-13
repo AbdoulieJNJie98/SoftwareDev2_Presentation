@@ -48,7 +48,7 @@ func (vgd VideoGameDatabase) PostNewVideoGame(newVideoGame models.VideoGame) err
 		"genre":    newVideoGame.Genre,
 		"price":    newVideoGame.Price,
 	}
-	_, err = connection.Exec(context.Background(), query, args) // look into context (providing an underscore in golang means it will ignore the argument)
+	_, err = connection.Exec(context.Background(), query, args) // (providing an underscore in golang means it will ignore the argument)
 	if err != nil {
 		print("error 2:" + err.Error())
 		return err
@@ -73,7 +73,7 @@ func (vgd VideoGameDatabase) UpdateVideoGame(updateVideoGame models.VideoGame) e
 		"price":        updateVideoGame.Price,
 		"orginalTitle": updateVideoGame.Title,
 	}
-	_, err = connection.Exec(context.Background(), query, args) // look into context (providing an underscore in golang means it will ignore the argument)
+	_, err = connection.Exec(context.Background(), query, args)
 	if err != nil {
 		print("error 2:" + err.Error())
 		return err
@@ -94,7 +94,7 @@ func (vgd VideoGameDatabase) DeleteVideoGame(deleteVideoGame models.VideoGame) e
 	args := pgx.NamedArgs{
 		"title": deleteVideoGame.Title,
 	}
-	_, err = connection.Exec(context.Background(), query, args) // look into context (providing an underscore in golang means it will ignore the argument)
+	_, err = connection.Exec(context.Background(), query, args)
 	if err != nil {
 		print("error 2:" + err.Error())
 		return err

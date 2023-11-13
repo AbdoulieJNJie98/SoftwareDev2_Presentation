@@ -22,5 +22,6 @@ func main() {
 
 	// handler that designates which route the request will take, and which port to activate
 	http.Handle("/", router)
+	// startup and keep running code
 	http.ListenAndServe(":8000", nil)
 }
